@@ -2,7 +2,20 @@
 
 ## SPIS TREŚCI
 
-<!-- TODO: Dodać spis treści -->
+- [PODSTAWY C++](#podstawy-c)
+  - [SPIS TREŚCI](#spis-treści)
+  - [ENCODING](#encoding)
+    - [POLSKIE ZNAKI](#polskie-znaki)
+  - [ZMIENNE](#zmienne)
+    - [RODZAJ ZMIENNEJ](#rodzaj-zmiennej)
+    - [TYPY ZMIENNEJ](#typy-zmiennej)
+  - [CIĄGI ZNAKÓW](#ciągi-znaków)
+  - [TABLICE](#tablice)
+  - [WEKTORY](#wektory)
+  - [ZNAKI SPECJALNE](#znaki-specjalne)
+  - [FUNKCJE MATEMATYCZNE](#funkcje-matematyczne)
+  - [PRZYTRZYMANIE KONSOLI](#przytrzymanie-konsoli)
+  - [POBIERANIE DANYCH OD UŻYTKOWNIKA](#pobieranie-danych-od-użytkownika)
 
 ---
 

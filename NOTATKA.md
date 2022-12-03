@@ -24,7 +24,7 @@
 ### POLSKIE ZNAKI
 
 ```cpp
-setlocale(LC_CTYPE, "Polish");  // napewno Windows i Linux
+setlocale(LC_CTYPE, "Polish");  // na pewno Windows i Linux
 system("chcp 1250>null");       // tylko Windows
 ```
 
@@ -33,21 +33,23 @@ system("chcp 1250>null");       // tylko Windows
 ## ZMIENNE
 
 ### RODZAJ ZMIENNEJ
+
 - `const` - stala [const int PI = 3.14;]
 
 ### TYPY ZMIENNEJ
-- `int` - calkowita
-- `float` - zmiennoprzecinkowa od 6 do 9 znakow
-- `double` - zmiennoprzecinkowa od 15 do 18 znakow
+
+- `int` - całkowita
+- `float` - zmiennoprzecinkowa od 6 do 9 znaków
+- `double` - zmiennoprzecinkowa od 15 do 18 znaków
 - `char` - znak ASCII
 - `string` - tekst
-- `bool` - logiczmy (true, false)
+- `bool` - logiczny (true, false)
 
 ---
 
 ## CIĄGI ZNAKÓW
 
-Ciagi znakow mozemy przechowywac rowniez w formie tablicy np. `char imie[9] = "Adam";` wowczas program ciag przechowa w sposob nastepujacy `[A, d, a, m, \0, \0, \0, \0, \0]` brakujace miejsca uzupelni znak null
+Ciągi znaków możemy przechowywać również w formie tablicy np. `char imie[9] = "Adam";` wówczas program ciąg przechowa w sposób następujący `[A, d, a, m, \0, \0, \0, \0, \0]` brakujące miejsca uzupełni znak null
 
 ```cpp
 // przyklad 1

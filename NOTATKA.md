@@ -1,4 +1,4 @@
-# PODSTAWY C++
+# Podstawy C++
 
 ## SPIS TREŚCI
 

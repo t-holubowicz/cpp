@@ -2,17 +2,24 @@
 
 ## SPIS TREŚCI
 
-- [PODSTAWY C++](#podstawy-c)
+- [Podstawy C++](#podstawy-c)
   - [SPIS TREŚCI](#spis-treści)
   - [ENCODING](#encoding)
     - [POLSKIE ZNAKI](#polskie-znaki)
   - [ZMIENNE](#zmienne)
     - [RODZAJ ZMIENNEJ](#rodzaj-zmiennej)
     - [TYPY ZMIENNEJ](#typy-zmiennej)
-  - [CIĄGI ZNAKÓW](#ciągi-znaków)
   - [TABLICE](#tablice)
+  - [CIĄGI ZNAKÓW](#ciągi-znaków)
   - [WEKTORY](#wektory)
   - [ZNAKI SPECJALNE](#znaki-specjalne)
+  - [OPERATORY](#operatory)
+    - [OPERATORY ARYTMETYCZNE](#operatory-arytmetyczne)
+    - [OPERATORY RELACYJNE](#operatory-relacyjne)
+    - [OPERATORY LOGICZNE](#operatory-logiczne)
+    - [OPERATORY PRZYPISANIA](#operatory-przypisania)
+    - [OPERATORY BINARNE](#operatory-binarne)
+    - [OPERATOR SIZEOF](#operator-sizeof)
   - [FUNKCJE MATEMATYCZNE](#funkcje-matematyczne)
   - [PRZYTRZYMANIE KONSOLI](#przytrzymanie-konsoli)
   - [POBIERANIE DANYCH OD UŻYTKOWNIKA](#pobieranie-danych-od-użytkownika)
@@ -44,6 +51,37 @@ system("chcp 1250>null");       // tylko Windows
 - `char` - znak ASCII
 - `string` - tekst
 - `bool` - logiczny (true, false)
+
+---
+
+## TABLICE
+
+**Jednowymiarowe**
+
+```cpp
+int oceny[6] = {1, 3, 5, 2, 6, 4};
+cout << "ocena w indeksie na pozycji 2: " << oceny[2] << endl;
+```
+
+**Wielowymiarowe**
+
+```cpp
+int tablica[3][4] = {
+    14, 13, 12, 11,
+    26, 27, 28, 29,
+    32, 34, 37, 39
+};
+cout << "pozycja w indeksie [0] i [3] to: " << tablica[0][3] << endl;
+```
+
+```cpp
+float cukierki[2][2] = {
+    1, 2,
+    3, 4
+};
+cukierki[0][0] = 11;
+cukierki[0][1] = 12;
+```
 
 ---
 
@@ -92,37 +130,6 @@ cout << "Twoje dane to: " << imie << endl;
 
 ---
 
-## TABLICE
-
-**Jednowymiarowe**
-
-```cpp
-int oceny[6] = {1, 3, 5, 2, 6, 4};
-cout << "ocena w indeksie na pozycji 2: " << oceny[2] << endl;
-```
-
-**Wielowymiarowe**
-
-```cpp
-int tablica[3][4] = {
-    14, 13, 12, 11,
-    26, 27, 28, 29,
-    32, 34, 37, 39
-};
-cout << "pozycja w indeksie [0] i [3] to: " << tablica[0][3] << endl;
-```
-
-```cpp
-float cukierki[2][2] = {
-    1, 2,
-    3, 4
-};
-cukierki[0][0] = 11;
-cukierki[0][1] = 12;
-```
-
----
-
 ## WEKTORY
 
 **WEKTORY** - są jak tablice, ale pamięć automatycznie się dostosowuje do ilości elementów w wektorze
@@ -166,6 +173,130 @@ int main()
 - `\'` - apostrof
 - `\?` - pytajnik
 - `\\` - backslash
+
+---
+
+## OPERATORY
+
+### OPERATORY ARYTMETYCZNE
+
+- `+` - dodawanie, np. 13 + 12 = 25
+- `-` - odejmowanie, np. 13 - 12 = 1
+- `*` - mnożenie, np. 13 \* 12 = 156
+- `/` - dzielenie, np. 13 / 12 = 1.083
+- `%` - modulo - reszta z dzielenia, np. 13 % 12 = 1
+
+### OPERATORY RELACYJNE
+
+- `++` - inkrementacja, np. liczba++;
+- `--` - dekrementacja, np. liczba--;
+
+**liczba++ vs ++liczba**
+
+**liczba++** - inkrementacja, najpierw wykonuje jakieś równanie później inkrementuje
+
+**++liczba** - preinkrementacja, najpierw liczbę wykonuje później wykonuje jakieś równanie
+
+- `==` - równa, np. liczba_1 == liczba_2
+- `<` - mniejsza, np. liczba_1 < liczba_2
+- `>` - większa, np. liczba_1 > liczba_2
+- `<=` - mniejsza równa, np. liczba_1 <= liczba_2
+- `>=` - większa równa, np. liczba_1 >= liczba_2
+- `!=` - różna, np. liczba_1 != liczba_2
+
+### OPERATORY LOGICZNE
+
+**AND:**
+
+```cpp
+// jest prawdą jeśli liczba_1 jest podzielna przez 2 i liczba_2 jest podzielna przez 2
+wynik = (((liczba_1 % 2) == 0) && ((liczba_2 % 2) == 0));
+```
+
+**OR:**
+
+```cpp
+// jest prawdą jeśli pin jest równy PIN_1 albo pin jest równy PIN_2
+dostep = ((pin == PIN_1) || (pin == PIN_2));
+```
+
+### OPERATORY PRZYPISANIA
+
+- `+=`
+- `-=`
+- `*=`
+- `%=`
+
+```cpp
+int liczba_1 = 8, liczba_2 = 3, wynik = 0;
+
+wynik += liczba_1 + liczba_2;
+cout << "+= " << wynik << endl; // 8 + 3 = 11
+
+wynik -= liczba_1;
+cout << "-= " << wynik << endl; // 11 - 8 = 3
+
+wynik *= liczba_2;
+cout << "*= " << wynik << endl; // 3 * 3 = 9
+
+wynik %= liczba_2;
+cout << "%= " << wynik << endl; // 9 % 3 = 0
+```
+
+### OPERATORY BINARNE
+
+- **&** - AND
+- **|** - OR
+- **^** - XOR
+- **~** - NOT
+- **<<** - przesuniecie bitowe w lewo
+- **>>** - przesuniecie bitowe w prawo
+
+```cpp
+int bin_1, bin_2, wynik;
+
+bin_1 = 13; // 00001101 -- osiem bitow
+bin_2 = 7;  // 00000111 -- osiem bitow
+wynik = (bin_1 & bin_2);
+cout << wynik << endl;
+
+// OR
+wynik = (bin_1 | bin_2); // 00001111 -- wynikiem bedzie 15
+cout << wynik << endl;
+
+// XOR
+wynik = (bin_1 ^ bin_2); // 00001010 -- wynikiem bedzie 10
+cout << wynik << endl;
+
+// przesuniecie bitowe w lewo
+wynik = (bin_1 << 1); // 00011010 -- wynikiem bedzie 26
+cout << wynik << endl;
+
+// przesuniecie bitowe w prawo
+wynik = (bin_1 >> 1); // 00000110 -- wynikiem bedzie 6
+cout << wynik << endl;
+
+// negacja
+wynik = (~bin_1); //  -- wynikiem bedzie -14
+cout << wynik << endl;
+```
+
+### OPERATOR SIZEOF
+
+**SIZEOF** - funkcja, która zwraca wielkość obiektu
+
+```cpp
+int a = 10;
+double b = 3.14;
+char c = 'a';
+long long int d = 303;
+
+// podane wyniki w bajtach
+cout << sizeof(a) << endl; // 4
+cout << sizeof(b) << endl; // 8
+cout << sizeof(c) << endl; // 1
+cout << sizeof(d) << endl; // 8
+```
 
 ---
 

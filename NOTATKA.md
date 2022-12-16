@@ -23,6 +23,7 @@
   - [FUNKCJE MATEMATYCZNE](#funkcje-matematyczne)
   - [PRZYTRZYMANIE KONSOLI](#przytrzymanie-konsoli)
   - [POBIERANIE DANYCH OD UŻYTKOWNIKA](#pobieranie-danych-od-użytkownika)
+  - [INSTRUKCJE WARUNKOWE](#instrukcje-warunkowe)
 
 ---
 
@@ -337,4 +338,35 @@ cin >> koszulki[0] >> koszulki[1] >> koszulki[2] >> koszulki[3];
 ```cpp
 string dane;
 getline(cin, dane, '\n');
+```
+
+---
+
+## INSTRUKCJE WARUNKOWE
+
+```cpp
+if (5 < 10)
+{
+  cout << "Liczba 5 jest mniejsza niz 10" << endl;
+  cout << "Odkrycie matematyczne" << endl;
+  cout << "1 wiersz kodu" << endl;
+  cout << "2 wiersz kodu" << endl;
+  cout << "3 wiersz kodu" << endl;
+  cout << "4 wiersz kodu" << endl;
+}
+```
+
+```cpp
+int podanaLiczba;
+cout << "Podaj dowolna liczbe: ";
+cin >> podanaLiczba;
+
+if (podanaLiczba < 0)
+{
+    cout << "Podana liczba jest ujemna" << endl;
+}
+else
+{
+    cout << "Podana liczba jest nieujemna" << endl;
+}
 ```

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="C++_Logo.png" style="max-width: 20rem;" alt="C++ Logo">
+  <img src="C++_Logo.png" style="max-height: 300px;" alt="C++ Logo">
 </p>
 
 <h2>SPIS TREŚCI</h2>
